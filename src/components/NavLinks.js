@@ -17,7 +17,7 @@ const NavLinks = () => {
                     {(navLinks.map((navLink, i) => (
                         <SingleNav key={i}>
                             {navLink.text}
-                            {navLink.icon}
+                            <img src={navLink.icon} />
                         </SingleNav>
                     )))}
                     <SignUpBtn to="/signin">Start selling</SignUpBtn>

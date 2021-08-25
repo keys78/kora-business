@@ -4,6 +4,7 @@ import Features from '../components/Features'
 import HelpYouGrow from '../components/HelpYouGrow'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
+import Steps from '../components/Steps'
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Hero />
             <HelpYouGrow {...introduction}/>
             <Features />
+            <Steps />
             
         </>
     )

@@ -1,7 +1,8 @@
 export const COLORS = {
 	lightOrange: '#ff6c02',
+	veryLightOrange:'#fff0e2',
 	darkBlue: {
-		100: 'hsl(43deg, 78%, 98%)',
+		100: '#040470',
 		300: '#1e266d',
 	},
 	grey: {
