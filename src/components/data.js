@@ -89,19 +89,6 @@ export const createAccount = {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const cardDetails = [
 	{	
 		id:1,

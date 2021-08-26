@@ -1,4 +1,5 @@
 import React from 'react'
+import BackToTop from '../components/BackToTop'
 import { introduction } from '../components/data'
 import Features from '../components/Features'
 import Footer from '../components/Footer'
@@ -14,12 +15,14 @@ const Home = () => {
         <>
             <Navbar />
             <Hero />
+            
             <HelpYouGrow {...introduction}/>
             <Features />
             <Steps />
             <Testimonial />
             <Subscribe />
             <Footer />
+            <BackToTop />
             
         </>
     )

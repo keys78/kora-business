@@ -39,7 +39,7 @@ const NavLinks = () => {
 
 
 const NavWrapper = styled.section`
-    /* width: 70%; */
+    width: 75%;
     margin: 0 auto;
     z-index: 10;
     display: flex;

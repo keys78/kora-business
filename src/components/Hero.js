@@ -7,8 +7,8 @@ import { COLORS, FONT_SIZES, FONT_WEIGHTS, BREAKPOINTS } from '../constants'
 
 const Hero = ({ primary, primary_space }) => {
     return (
-        <HeroBackground>
-            <HeroContainer>
+        <HeroBackground >
+            <HeroContainer id="home">
                 <HeroGrid>
                     <HeroArticles>
                         <Header>{heroDetails.header}</Header>

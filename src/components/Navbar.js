@@ -11,10 +11,13 @@ const Navbar = () => {
 }
 
 const NavbarWrapper = styled.div`
-    width: 75%;
+    width: 100%;
     margin:0 auto;
     /* height: 75px; */
-    /* background: green; */
+    background: green;
+    position:fixed;
+    top:0;
+    z-index: 999999;;
     padding:20px 0;
 `
 
