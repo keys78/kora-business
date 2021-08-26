@@ -10,3 +10,40 @@ body{
   width: 50%;
   object-fit: cover;
 } 
+
+.subscribe{
+  width:100%;
+  padding: 8rem 0;
+  /* align-items: center; */
+  text-align: center;
+  background: #fff;
+}
+
+.subscribe h1{
+  color:#1e266d;
+}
+
+.subscribe p{
+  padding: 0.2rem 0;
+  width: 40%;
+  margin:auto;
+}
+
+.subscribe form {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0 auto;
+  align-items: center;
+  border: 1px solid #aaabad77;
+  border-radius:50px;
+  padding-left: 3px;
+  margin-top: 4rem;
+}
+
+.subscribe form input{
+  border:none;
+  outline: none;
+  padding:0.4rem 0.2rem;
+  width: 100%;
+}

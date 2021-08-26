@@ -53,6 +53,9 @@ export const whatToSell = {
 	tag:'Step 1',
 	heading: 'Figure out what to sell',
 	description: 'Delivering powerful brands for popular shops while creating beautiful concepts and evocative logos. Use the opportunity to prepare complete style guides',
+	list:false,
+	button:true,
+	imgStart:true,
 	label:'Lightbox',
     
 }
@@ -63,6 +66,9 @@ export const analyzeMarket = {
 	tag:'Step 2',
 	heading: 'Analyze the marketplace',
 	description: 'Our team of competent designers and developers are able to create beautiful designs and structured code that will serve your ecommerce project on the long term',
+	list:true,
+	button:false,
+	imgStart:false,
 	obj1:'Delivering powerful brands for popular shops',
 	obj2:'Creating beautiful concepts and evocative logos',
 	obj3:'Preparing complete branding guides and styles'
@@ -76,6 +82,9 @@ export const createAccount = {
 	tag:'Step 3',
 	heading: 'Create your shop account',
 	description: 'We can deliver a comprehensive marketing plan and then execute it down to the smallest details. To start using Kora just sign up and submit your details',
+	list:false,
+	button:true,
+	imgStart:true,
 	label:'Sign up now',
     
 }

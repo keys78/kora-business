@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { COLORS, FONT_SIZES, FONT_WEIGHTS, BREAKPOINTS } from '../constants'
-import { analyzeMarket, stepInfo, whatToSell } from './data'
+import { analyzeMarket, createAccount, stepInfo, whatToSell } from './data'
 import heroBg from '../assets/images/details-1-background.png'
 import DataSpread from './DataSpread'
 
@@ -16,6 +16,7 @@ const Steps = () => {
                         <Holder>
                             <DataSpread {...whatToSell}/>
                             <DataSpread {...analyzeMarket}/>
+                            <DataSpread {...createAccount} />
                         </Holder>
 
                 </StepsWrapper>

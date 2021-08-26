@@ -3,6 +3,7 @@ export const COLORS = {
 	veryLightOrange:'#fff0e2',
 	darkBlue: {
 		100: '#040470',
+		200:'#3232A0',
 		300: '#1e266d',
 	},
 	grey: {

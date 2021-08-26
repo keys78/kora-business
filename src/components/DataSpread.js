@@ -4,25 +4,26 @@ import { FONT_SIZES, FONT_WEIGHTS, COLORS } from '../constants'
 import Button from './Button'
 
 
-const HelpYouGrow = ({ image, heading, description, label, tag, obj1, obj2, obj3 }) => {
+const HelpYouGrow = ({ imgStart, button, list, image, heading, description, label, tag, obj1, obj2, obj3 }) => {
     return (
         <HelpYouGrowContainer>
             <Wrapper>
-                <HelpYou>
+                <HelpYou imgStart={imgStart}>
                     <ImgHolder>
                         <Img src={image} />
                     </ImgHolder>
                     <HelpYouText>
-                        <Tag>{ tag }</Tag>
+                        <Tag>{tag}</Tag>
                         <Header>{heading}</Header>
                         <Description>{description}</Description>
-                        {/* {goals.map((goal, i) => (
-                            <li id={i}>{goal.obj}</li>
-                        ))} */}
-                        <li>{obj1}</li>
-                        <li>{obj2}</li>
-                        <li>{obj3}</li>
-                        <Button text={label} />
+                        <List list={list}>
+                            <li>{obj1}</li>
+                            <li>{obj2}</li>
+                            <li>{obj3}</li>
+                        </List>
+                        <ButtonWrapper button={button} >
+                            <Button text={label} />
+                        </ButtonWrapper>
                     </HelpYouText>
                 </HelpYou>
 
@@ -35,7 +36,7 @@ const HelpYouGrow = ({ image, heading, description, label, tag, obj1, obj2, obj3
 const HelpYouGrowContainer = styled.section`
     position: relative;
     /* margin-top: 100vh; */
-    height: 100vh;
+    /* height: 100vh; */
 `
 const Wrapper = styled.div`
     /* width: 75%; */
@@ -43,9 +44,9 @@ const Wrapper = styled.div`
 `
 
 const HelpYou = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3rem;
+    display: flex;
+    flex-direction: ${({imgStart}) => (imgStart ? 'row' : 'row-reverse')};
+    gap: 3rem;
     align-items: center;
     margin-top: 8rem;
 `
@@ -79,5 +80,17 @@ const Tag = styled.div`
     background: ${COLORS.veryLightOrange};
     color:${COLORS.lightOrange};
 
+`
+
+const List = styled.div`
+    font-size: ${FONT_SIZES.xs};
+    font-weight: ${FONT_WEIGHTS.regular};
+    color: ${COLORS.grey[300]};
+    line-height: 2rem;
+    list-style-type:square;
+    display: ${({ list }) => (list ? 'block' : 'none')};
+`
+const ButtonWrapper = styled.div`
+    display: ${({ button }) => (button ? 'block' : 'none')};
 `
 export default HelpYouGrow
