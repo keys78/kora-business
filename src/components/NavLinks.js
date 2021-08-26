@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { navLinks } from './data'
+import { useState } from 'react'
 import logo from '../assets/images/logo.svg'
 import { COLORS, FONT_SIZES, FONT_WEIGHTS, BREAKPOINTS } from '../constants'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
+import { Link as LinkRouter } from "react-router-dom";
+import Dropdown from './Dropdown'
 
 const NavLinks = () => {
+    const [dropDown, setDropDown] = useState(false)
+
     const toggleHome = () => {
         scroll.scrollToTop();
     }
@@ -31,7 +36,7 @@ const NavLinks = () => {
                     )))}
                     <SignUpBtn to="/signin">Start selling</SignUpBtn>
                 </NavLinksWrapper>
-
+                {/* <Dropdown/> */}
             </NavWrapper>
         </>
     )
@@ -79,8 +84,10 @@ const SingleNav = styled(LinkScroll)`
         transition: 0.3s;
     }
 `
-const SignUpBtn = styled.button`
+const SignUpBtn = styled(LinkRouter)`
     outline: none;
+    text-decoration: none;
+    text-align:center;
     border-radius: 50px;
     background: ${COLORS.darkBlue[300]};
     color: ${COLORS.white};
