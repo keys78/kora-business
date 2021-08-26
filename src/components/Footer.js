@@ -18,24 +18,29 @@ const Footer = () => {
                 <Links>
                     <Heading>Links</Heading>
                     <Important>Important: Terms & Conditions, Privacy Policy</Important>
-                    <Important>Useful: Colorpicker, Icon Library, Illustrations</Important>
-                    <Important>Menu: Home, Intro, Features, Details</Important>
+                    <Useful>Useful: Colorpicker, Icon Library, Illustrations</Useful>
+                    <Menu>Menu: Home, Intro, Features, Details</Menu>
                 </Links>
-                <SocialIcons>
-                    <SocialIconWrapper>
-                        <FaFacebookF />
-                        <FaTwitter />
-                        <FaPinterest />
-                        <FaInstagram />
-                    </SocialIconWrapper>
-                </SocialIcons>
+                <Socials>
+                    <SocialIcons>
+                        <SocialIconWrapper><FaFacebookF /></SocialIconWrapper>
+                        <SocialIconWrapper><FaPinterest /></SocialIconWrapper>
+                        <SocialIconWrapper><FaTwitter /></SocialIconWrapper>
+                        <SocialIconWrapper><FaInstagram /></SocialIconWrapper>
+                    </SocialIcons>
+                    <Contact>We would love to hear from you </Contact>
+                    <Site>contact@site.com</Site>
+                </Socials>
             </Wrapper>
+            <Copyright>Copyright © | Emcodes</Copyright>
         </FooterContainer>
     )
 }
 
 const FooterContainer = styled.section`
     background: ${COLORS.grey[100]};
+    padding-top:5rem;
+    padding-bottom:1rem;
 `
 const Wrapper = styled.div`
     width: 75%;
@@ -44,23 +49,80 @@ const Wrapper = styled.div`
     grid-gap: 3rem;
     align-items: flex-start;
     grid-template-columns: repeat(3, 1fr);
+    
 `
 const About = styled.div``
 const Links = styled.div``
-const SocialIcons = styled.div``
+const Socials = styled.div``
+const SocialIcons = styled.div`
+    display: flex;
+    gap:2rem;
+`
 
 const Heading = styled.h1`
    color:${COLORS.grey[300]};
    font-weight:${FONT_WEIGHTS.bold};
    font-size:${FONT_SIZES.s};
 `
-const Text = styled.h1`
+const Text = styled.h2`
    color:${COLORS.grey[300]};
    font-weight:${FONT_WEIGHTS.regular};
-   font-size:${FONT_SIZES.xs};
+   font-size:${FONT_SIZES.nuetta};
+   line-height: 1.5rem;
+   margin-top: 1.5rem;
 `
 
-const SocialIconWrapper = styled.div``
-const Important = styled.div``
+const SocialIconWrapper = styled.div`
+    background:${COLORS.white};
+    font-size:${FONT_SIZES.s};
+    padding: 1rem 1rem 1rem 0.8rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 9999px;
+    text-align: center;
+    margin:auto 0;
+    transition: 0.4s;
+
+    &:hover{
+        color:${COLORS.white};
+        background:${COLORS.grey[300]};
+        transition: 0.4s;
+        cursor: pointer;
+
+    }
+`
+
+const Important = styled.h2`
+    color:${COLORS.grey[300]};
+    font-weight:${FONT_WEIGHTS.regular};
+    font-size:${FONT_SIZES.nuetta};
+    margin-top: 1.5rem;
+`
+const Useful = styled.h2`
+    color:${COLORS.grey[300]};
+    font-weight:${FONT_WEIGHTS.regular};
+    font-size:${FONT_SIZES.nuetta};
+`
+const Menu = styled.h2`
+    color:${COLORS.grey[300]};
+    font-weight:${FONT_WEIGHTS.regular};
+    font-size:${FONT_SIZES.nuetta};
+`
+const Contact = styled.h3`
+   color:${COLORS.grey[300]};
+   font-weight:${FONT_WEIGHTS.regular};
+   font-size:${FONT_SIZES.nuetta};
+`
+const Site = styled.h3`
+   color:${COLORS.grey[300]};
+   font-weight:${FONT_WEIGHTS.bold};
+   font-size:${FONT_SIZES.nuetta};
+`
+const Copyright = styled.h6`
+    color:${COLORS.grey[300]};
+   font-weight:${FONT_WEIGHTS.semiBold};
+   font-size:${FONT_SIZES.nuetta};
+   text-align: center;
+`
 
 export default Footer

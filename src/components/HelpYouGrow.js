@@ -4,9 +4,9 @@ import { FONT_SIZES, FONT_WEIGHTS, COLORS } from '../constants'
 import Button from './Button'
 import Swipe from './Swipe'
 
-const HelpYouGrow = ({ image, heading, description }) => {
+const HelpYouGrow = ({ id, image, heading, description }) => {
     return (
-        <HelpYouGrowContainer>
+        <HelpYouGrowContainer id={id}>
             <Wrapper>
                 <TextWrapper>
                     <Text>Brands and shops that use Kora to grow their business</Text>

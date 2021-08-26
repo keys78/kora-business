@@ -12,19 +12,19 @@ import { BsChatDots } from 'react-icons/bs'
 export const navLinks = [
 	{
 		text: 'Home',
-		path: '/'
+		path: 'home'
 	},
 	{
 		text: 'Intro',
-		path: '/intro'
+		path: 'intro'
 	},
 	{
 		text: 'Features',
-		path: '/features'
+		path: 'features'
 	},
 	{
 		text: 'Details',
-		path: '/details'
+		path: 'details'
 	},
     {
         text:'Drop',

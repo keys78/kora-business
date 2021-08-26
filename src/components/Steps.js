@@ -8,7 +8,7 @@ import DataSpread from './DataSpread'
 const Steps = () => {
     return (
         <div>
-            <StepsContainer>
+            <StepsContainer id="details">
                 <StepsWrapper>
                         <Heading>{ stepInfo.heading }</Heading>
                         <Description>{ stepInfo.description }</Description>

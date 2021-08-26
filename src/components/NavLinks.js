@@ -3,19 +3,28 @@ import styled from 'styled-components'
 import { navLinks } from './data'
 import logo from '../assets/images/logo.svg'
 import { COLORS, FONT_SIZES, FONT_WEIGHTS, BREAKPOINTS } from '../constants'
+import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
 
 const NavLinks = () => {
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
+
     return (
         <>
             <NavWrapper>
 
                 <LogoWrapper>
-                    <Img src={logo} alt="logo" />
+                    <Img onClick={toggleHome} src={logo} alt="logo" />
                 </LogoWrapper>
 
                 <NavLinksWrapper>
                     {(navLinks.map((navLink, i) => (
-                        <SingleNav key={i}>
+                        <SingleNav key={i}
+                        to={navLink.path}
+                        smooth={true} duration={500} spy={true}
+                        exact='true'
+                        >
                             {navLink.text}
                             <img src={navLink.icon} />
                         </SingleNav>
@@ -45,6 +54,7 @@ const LogoWrapper = styled.div`
 const Img = styled.img`
     width: auto;
     height:1.5rem;
+    cursor: pointer;
     
 `
 const NavLinksWrapper = styled.div`
@@ -54,7 +64,7 @@ const NavLinksWrapper = styled.div`
 
 `
 
-const SingleNav = styled.li`
+const SingleNav = styled(LinkScroll)`
     list-style-type: none;
     color: ${COLORS.darkBlue[300]};
     font-weight: ${FONT_WEIGHTS.semiBold};

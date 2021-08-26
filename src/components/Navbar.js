@@ -4,7 +4,7 @@ import NavLinks from './NavLinks'
 
 const Navbar = () => {
     return (
-        <NavbarWrapper>
+        <NavbarWrapper id="home">
             <NavLinks />
         </NavbarWrapper>
     )

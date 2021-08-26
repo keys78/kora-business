@@ -5,7 +5,7 @@ import { cardDetails } from './data'
 
 const Features = () => {
     return (
-        <FeaturesContainer>
+        <FeaturesContainer id="features">
             <Wrapper>
                 <TextHolder>
                     <Heading>Check out all the features</Heading>

@@ -23,6 +23,7 @@ export const FONT_WEIGHTS = {
 
 export const FONT_SIZES = {
 	xxs: '0.75rem', //12px
+	nuetta:'0.9rem',//custom
 	xs: '1rem', //16px
 	s: '1.125rem', //18px
 	m: '1.5rem', //24px
