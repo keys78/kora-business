@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FONT_SIZES, FONT_WEIGHTS, COLORS } from '../constants'
+import { FONT_SIZES, FONT_WEIGHTS, COLORS, BREAKPOINTS } from '../constants'
 import Button from './Button'
 import Swipe from './Swipe'
 
@@ -35,12 +35,21 @@ const HelpYouGrowContainer = styled.section`
     position: relative;
     margin-top: 100vh;
     height: 100vh;
+
+    @media ${BREAKPOINTS.desktop} {
+		margin-top: 120vh;
+	}
 `
 const Wrapper = styled.div`
     width: 75%;
     margin: 0 auto;
-`
 
+    @media ${BREAKPOINTS.desktop} {
+		width: 90%;
+        text-align:center;
+	}
+   
+`
 const TextWrapper = styled.div`
 
 `
@@ -63,12 +72,19 @@ const HelpYou = styled.div`
     grid-column-gap: 3rem;
     align-items: center;
     margin-top: 8rem;
+
+   
+    @media ${BREAKPOINTS.laptop} {
+        grid-template-columns: 1fr;
+	}
 `
 const ImgHolder = styled.div`
-
+  
 `
 const Img = styled.img`
-    
+    @media ${BREAKPOINTS.tablet} {
+		width: 90vw;
+	}
 `
 const HelpYouText = styled.div`
     padding: 0 3rem;

@@ -13,11 +13,13 @@ const Hero = ({ primary, primary_space }) => {
                     <HeroArticles>
                         <Header>{heroDetails.header}</Header>
                         <Text>{heroDetails.text}</Text>
-                        <Button primary={primary} text="Sign up for free" />
-                        <Button primary_space primary={!primary} text="discover" />
+                        <ButtonHolder>
+                            <Button primary={primary} text="Sign up for free" />
+                            <Button primary_space primary={!primary} text="discover" />
+                        </ButtonHolder>
                     </HeroArticles>
                     <HeroImage>
-                        <Img src={heroDetails.image}/>
+                        <Img src={heroDetails.image} />
                     </HeroImage>
                 </HeroGrid>
             </HeroContainer>
@@ -40,20 +42,40 @@ const HeroContainer = styled.div`
     width: 75%;
     margin: 0 auto;
     padding-top:150px;
+
+    @media ${BREAKPOINTS.laptop} {
+		width:90%;
+        padding-top:100px;
+	}
 `
 const HeroGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1.3fr;
-    /* grid-template-columns: repeat(2, 1fr); */
     align-items: center;
+
+    @media ${BREAKPOINTS.laptop} {
+		grid-template-columns: 1fr;
+	}
+
 `
 const HeroArticles = styled.div`
     width: 80%;
+
+    @media ${BREAKPOINTS.laptop} {
+		width: 100%;
+        text-align:center;
+	}
 `
 const Header = styled.div`
     color:${COLORS.darkBlue[300]};
     font-size:${FONT_SIZES.xxl};
     font-weight: ${FONT_WEIGHTS.bold};
+
+    @media ${BREAKPOINTS.laptop} {
+		width: 100%;
+        font-size:${FONT_SIZES.xl};
+        line-height: 3rem;
+	}
 `
 const Text = styled.div`
     color:${COLORS.grey[300]};
@@ -66,5 +88,11 @@ const HeroImage = styled.div`
 `
 const Img = styled.img`
     width: 100%;
+`
+
+const ButtonHolder = styled.div`
+    @media ${BREAKPOINTS.laptop} {
+		margin:0.7rem 0 4rem 0;
+	}
 `
 export default Hero

@@ -37,14 +37,21 @@ const Features = () => {
 
 const FeaturesContainer = styled.section`
     background: ${COLORS.darkBlue[100]};
-    /* height: calc(100vh - 75px); */
     padding-bottom:2rem;
     width: 100%;
+    
+    @media ${BREAKPOINTS.laptop} {
+		margin-top:50vh;
+	}
 `;
 const Wrapper = styled.div`
    width: 75%; 
    margin: 0 auto;
    padding-top:8rem;
+
+   @media ${BREAKPOINTS.laptop} {
+        width: 90%;
+	}
 `;
 const TextHolder = styled.div`
    text-align: center;
@@ -60,6 +67,10 @@ const Description = styled.p`
    opacity: 0.7;
    font-weight:${FONT_WEIGHTS.regular};
    font-size:${FONT_SIZES.xs};
+
+   @media ${BREAKPOINTS.tablet} {
+        padding:0;
+	}
    
 `
 const CardWrapper = styled.div`
@@ -68,6 +79,10 @@ const CardWrapper = styled.div`
     grid-gap: 4rem;
     align-items: flex-start;
     margin: 6rem 0;
+    
+    @media ${BREAKPOINTS.tablet} {
+        grid-template-columns:1fr;
+	}
     
 `
 const SingleCardWrapper = styled.div`

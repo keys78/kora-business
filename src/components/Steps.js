@@ -33,6 +33,10 @@ const StepsWrapper = styled.div`
     width: 75%; 
     margin: 0 auto;
     padding: 6rem 0;
+
+    @media ${BREAKPOINTS.laptop} {
+		width: 90%; 
+	}
 `
 
 const Heading = styled.h1`
@@ -41,6 +45,10 @@ const Heading = styled.h1`
     color: ${COLORS.darkBlue[300]};
     line-height: 2.3rem;
     width: 60%;
+
+    @media ${BREAKPOINTS.laptop} {
+		width: 100%; 
+	}
 `
 const Description = styled.p`
     font-size: ${FONT_SIZES.xs};
@@ -48,6 +56,10 @@ const Description = styled.p`
     color: ${COLORS.grey[300]};
     margin: 1.5rem 0;
     width: 70%;
+
+    @media ${BREAKPOINTS.laptop} {
+		width: 100%; 
+	}
     
 `
 

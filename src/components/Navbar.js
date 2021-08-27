@@ -31,7 +31,8 @@ const NavbarWrapper = styled.div`
     margin:0 auto;
     /* height: 75px; */
     background: ${({ scrollNav }) => ( scrollNav ? '#FFF5EE' : 'transparent')};
-    position:fixed;
+    border-bottom: ${({ scrollNav }) => ( scrollNav ? '1px solid #ffeeee' : 'transparent')};
+    position: sticky;
     top:0;
     z-index: 999999;;
     padding:20px 0;

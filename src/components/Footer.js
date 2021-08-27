@@ -49,7 +49,11 @@ const Wrapper = styled.div`
     grid-gap: 3rem;
     align-items: flex-start;
     grid-template-columns: repeat(3, 1fr);
-    
+
+    @media ${BREAKPOINTS.laptop} {
+		width: 90%; 
+        grid-template-columns: 1fr;
+	}
 `
 const About = styled.div``
 const Links = styled.div``

@@ -30,6 +30,11 @@ const Wrapper = styled.div`
    width: 75%; 
    margin: 0 auto;
    padding-top:8rem;
+
+   @media ${BREAKPOINTS.laptop} {
+       width: 90%;
+       padding-top:4rem;
+	}
 `;
 const TextHolder = styled.div`
    text-align: center;
@@ -46,6 +51,10 @@ const Description = styled.p`
    opacity: 0.7;
    font-weight:${FONT_WEIGHTS.regular};
    font-size:${FONT_SIZES.xs};
+
+   @media ${BREAKPOINTS.laptop} {
+        padding:0;
+	}
    `
 
 export default Testimonial

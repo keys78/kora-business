@@ -7,12 +7,18 @@ import { COLORS, FONT_SIZES, FONT_WEIGHTS, BREAKPOINTS } from '../constants'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
 import { Link as LinkRouter } from "react-router-dom";
 import Dropdown from './Dropdown'
+import { FaBars } from 'react-icons/fa'
+
 
 const NavLinks = () => {
-    const [dropDown, setDropDown] = useState(false)
+    const [mobileNav, setMobileNav] = useState(false)
 
     const toggleHome = () => {
         scroll.scrollToTop();
+    }
+
+    const toggleNav = () => {
+        setMobileNav(!mobileNav)
     }
 
     return (
@@ -35,8 +41,11 @@ const NavLinks = () => {
                         </SingleNav>
                     )))}
                     <SignUpBtn to="/signin">Start selling</SignUpBtn>
-                </NavLinksWrapper>
-                {/* <Dropdown/> */}
+                </NavLinksWrapper >
+                { mobileNav && <Dropdown/> }
+                <MobileIcons onClick={toggleNav}>
+                        <FaBars />
+                </MobileIcons>
             </NavWrapper>
         </>
     )
@@ -50,6 +59,11 @@ const NavWrapper = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media ${BREAKPOINTS.laptop} {
+		width: 90%;
+	}
+   
 `
 
 const LogoWrapper = styled.div`
@@ -65,7 +79,10 @@ const Img = styled.img`
 const NavLinksWrapper = styled.div`
     display: flex;
     gap: 30px;
-    /* width: 100%; */
+
+    @media screen and (max-width: 768px) {
+        display:none;
+    }
 
 `
 
@@ -94,7 +111,7 @@ const SignUpBtn = styled(LinkRouter)`
     transition: 0.3s;
     border:1px solid transparent;
     font-size:${FONT_SIZES.xs};
-    padding:10px 17px ;
+    padding:5px 17px ;
     width: 120px;
 
     &:hover{
@@ -105,5 +122,13 @@ const SignUpBtn = styled(LinkRouter)`
         border: 1px solid ${COLORS.darkBlue[300]};
     }
 `
+ const MobileIcons = styled.div`
+    cursor: pointer;
+    font-size:${FONT_SIZES.m};
+
+    @media ${BREAKPOINTS.tablet} {
+		display: none;
+	}
+ `
 
 export default NavLinks

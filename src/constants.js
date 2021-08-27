@@ -44,10 +44,10 @@ export const BREAKPOINT_SIZES = {
 };
 
 export const BREAKPOINTS = {
-	mobileSmall: `(min-width: ${BREAKPOINT_SIZES.mobileSmall}px)`,
-	mobile: `(min-width: ${BREAKPOINT_SIZES.mobile}px)`,
-	tablet: `(min-width: ${BREAKPOINT_SIZES.tablet}px)`,
-	laptop: `(min-width: ${BREAKPOINT_SIZES.laptop}px)`,
-	desktop: `(min-width: ${BREAKPOINT_SIZES.desktop}px)`,
-	desktopLarge: `(min-width: ${BREAKPOINT_SIZES.desktopLarge}px)`,
+	mobileSmall: `(max-width: ${BREAKPOINT_SIZES.mobileSmall}px)`,
+	mobile: `(max-width: ${BREAKPOINT_SIZES.mobile}px)`,
+	tablet: `(max-width: ${BREAKPOINT_SIZES.tablet}px)`,
+	laptop: `(max-width: ${BREAKPOINT_SIZES.laptop}px)`,
+	desktop: `(max-width: ${BREAKPOINT_SIZES.desktop}px)`,
+	desktopLarge: `(max-width: ${BREAKPOINT_SIZES.desktopLarge}px)`,
 };

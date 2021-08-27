@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FONT_SIZES, FONT_WEIGHTS, COLORS } from '../constants'
+import { FONT_SIZES, FONT_WEIGHTS, COLORS, BREAKPOINTS } from '../constants'
 import Button from './Button'
 
 
@@ -37,6 +37,7 @@ const HelpYouGrowContainer = styled.section`
     position: relative;
     /* margin-top: 100vh; */
     /* height: 100vh; */
+    width: 100%;
 `
 const Wrapper = styled.div`
     /* width: 75%; */
@@ -49,12 +50,20 @@ const HelpYou = styled.div`
     gap: 3rem;
     align-items: center;
     margin-top: 8rem;
+
+    @media ${BREAKPOINTS.laptop} {
+        margin-top: 4rem;
+        flex-direction: ${({imgStart}) => (imgStart ? 'column' : 'column-reverse')};
+		
+	}
 `
 const ImgHolder = styled.div`
 
 `
 const Img = styled.img`
-    
+    @media ${BREAKPOINTS.laptop} {
+       width: 90%;
+	}
 `
 const HelpYouText = styled.div`
     padding: 0 3rem;
