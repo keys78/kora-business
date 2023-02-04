@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { navLinks } from './data'
 import { useState } from 'react'
-import logo from '../assets/images/logo.svg'
 import { COLORS, FONT_SIZES, FONT_WEIGHTS, BREAKPOINTS } from '../constants'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
 import { Link as LinkRouter } from "react-router-dom";

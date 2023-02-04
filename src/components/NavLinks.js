@@ -32,9 +32,9 @@ const NavLinks = () => {
                 <NavLinksWrapper>
                     {(navLinks.map((navLink, i) => (
                         <SingleNav key={i}
-                        to={navLink.path}
-                        smooth={true} duration={500} spy={true}
-                        exact='true'
+                            to={navLink.path}
+                            smooth={true} duration={500} spy={true}
+                            exact='true'
                         >
                             {navLink.text}
                             <img src={navLink.icon} />
@@ -42,10 +42,10 @@ const NavLinks = () => {
                     )))}
                     <SignUpBtn to="/signin">Start selling</SignUpBtn>
                 </NavLinksWrapper >
-                { mobileNav && <Dropdown/> }
-                <MobileIcons onClick={toggleNav}>
+                {mobileNav && <Dropdown />}
+                {/* <MobileIcons onClick={toggleNav}>
                         <FaBars />
-                </MobileIcons>
+                </MobileIcons> */}
             </NavWrapper>
         </>
     )
@@ -122,7 +122,7 @@ const SignUpBtn = styled(LinkRouter)`
         border: 1px solid ${COLORS.darkBlue[300]};
     }
 `
- const MobileIcons = styled.div`
+const MobileIcons = styled.div`
     cursor: pointer;
     font-size:${FONT_SIZES.m};
 
