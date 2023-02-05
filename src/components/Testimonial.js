@@ -22,7 +22,6 @@ const Testimonial = () => {
 
 const FeaturesContainer = styled.section`
     background: ${COLORS.darkBlue[100]};
-    /* height: calc(100vh - 75px); */
     padding-bottom:6rem;
     width: 100%;
 `;
