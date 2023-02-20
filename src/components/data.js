@@ -38,7 +38,7 @@ export const heroDetails = {
     image: heroImage
 }
 
-// Two phased components
+// Two phased component
 export const introduction = {
     id:'intro',
 	image:introImg,
