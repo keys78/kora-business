@@ -7,7 +7,6 @@ import { COLORS, FONT_SIZES, FONT_WEIGHTS, BREAKPOINTS } from '../constants'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
 import { Link as LinkRouter } from "react-router-dom";
 import Dropdown from './Dropdown'
-import { FaBars } from 'react-icons/fa'
 
 
 const NavLinks = () => {
